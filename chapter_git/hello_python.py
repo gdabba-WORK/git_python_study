@@ -1,15 +1,24 @@
 def add(a, b):
-    return a + b
+    return a+b
 
 
 def div(a, b):
     return a / b
 
 
-if __name__ == "__main__":
+def mul(a, b):
+    return a*b
+
+
+if  __name__ == "__main__":
     print("Hello Python")
     print("hi pycharm")
     print("Good Luck")
     x = 10
     y = 5
-    print("add({}, {}) result => {}\ndiv({}, {}) result => {}".format(x, y, add(x,y), x, y, div(x,y)))
+    print("add({}, {}) result => {}".format(x, y, add(x,y)))
+    print("div({}, {}) result => {}".format(x, y, div(x,y)))
+    print("mul({}, {}) result => {}".format(x, y, mul(x,y)))
+
+
+
