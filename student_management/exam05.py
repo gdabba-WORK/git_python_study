@@ -5,8 +5,6 @@ from student_management.student_manager import manager_exe
 
 if __name__ == "__main__":
     manager_exe()
-    # add_student()
-
 
     # Test Codes of student_data.py
     # student_list = create_database()
