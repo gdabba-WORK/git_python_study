@@ -1,9 +1,11 @@
 from student_management.student_manager import print_student
 from student_management.student_manager import add_student
+from student_management.student_manager import manager_exe
+
 
 if __name__ == "__main__":
-    print_student()
-    add_student()
+    manager_exe()
+    # add_student()
 
 
     # Test Codes of student_data.py

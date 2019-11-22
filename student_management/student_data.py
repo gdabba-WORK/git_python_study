@@ -15,11 +15,14 @@ def total_avg_insert(_list):
 
 
 def create_dict(_dict, _list):
-    i = 1
-    for list_list in _list:
+    for list_list, i in zip(_list, range(len(_list))):
         _dict[i] = list_list
-        i += 1
     # print("create_dict() done!\n")
+
+
+def create_list(_list, _dict):
+    pass
+    # todo add_student()에서 파일에 저장된 학생의 키값(번호)이 입력되는 키값과 중복되는지 확인하기 위해 dict 타입을 list 타입으로 전환해야 함
 
 
 def fwrite_dict(filename, _dict):
