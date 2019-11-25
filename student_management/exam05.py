@@ -1,11 +1,8 @@
-from student_management.student_manager import print_student
-from student_management.student_manager import add_student
 from student_management.student_manager import manager_exe
 
 
 if __name__ == "__main__":
     manager_exe()
-
     # Test Codes of student_data.py
     # student_list = create_database()
     # print("print(student_list)", student_list, sep='\n', end='\n\n')

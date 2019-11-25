@@ -7,17 +7,24 @@ def create_database():
 
 
 def total_avg_insert(_list):
-    for list_list in _list:
-        total = list_list[2] + list_list[3] + list_list[4]
+    if type(_list[0]) == list:
+        for list_list in _list:
+            total = list_list[2] + list_list[3] + list_list[4]
+            avg = total / 3
+            list_list.extend([total, avg])
+    elif type(_list[0]) == int:
+        total = _list[2] + _list[3] + _list[4]
         avg = total / 3
-        list_list.extend([total, avg])
+        _list.extend([total, avg])
     # print("total_avg_insert() done!\n")
-    # todo student_manager.add_student()에 사용하기 위해서 변형해야함
 
 
 def list_to_dict(_dict, _list):
-    for list_list in _list:
-        _dict[list_list[0]] = list_list[1:]
+    if type(_list[0]) == list:
+        for list_list in _list:
+            _dict[list_list[0]] = list_list[1:]
+    elif type(_list[0]) == int:
+        _dict[_list[0]] = _list[1:]
     # print("create_dict() done!\n")
 
 
@@ -28,12 +35,14 @@ def fwrite_dict(filename, _dict):
                     f" {_tuple[1][4]} {_tuple[1][5]}\n")
     # print("fwrite_dict() done!\n")
 
+
 def fappend_dict(filename, _dict):
     with open(filename, "at") as f:
         for _tuple in _dict.items():
             f.write(f"{_tuple[0]} {_tuple[1][0]} {_tuple[1][1]} {_tuple[1][2]} {_tuple[1][3]}"
                     f" {_tuple[1][4]} {_tuple[1][5]}\n")
     # print("fappend_dict() done!\n")
+
 
 def fread_dict(filename, _dict):
     with open(filename, "rt") as f:
@@ -44,5 +53,3 @@ def fread_dict(filename, _dict):
                                         int(temp_list[4]), int(temp_list[5]), float(temp_list[6])]
             temp_list.clear()
     # print("fread_dict() done!\n")
-
-
